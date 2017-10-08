@@ -1,0 +1,26 @@
+body {
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
+.logo {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  justify-content: flex-start;
+  max-width: 960px;
+  text-transform: uppercase;
+}
+
+.logo img {
+  height: 27px;
+  padding-right: 15px;
+  width: auto;
+}
+
+.logo h2 {
+
+}
