@@ -2,7 +2,6 @@ body {
   background-color: white;
   font-family: Helvetica;
   font-size: 18px;
-  max-width: 480px;
 }
 
 h1,h2,h3,h4,p {
@@ -18,22 +17,28 @@ a {
 header {
   background: url('../images/moto.jpeg') no-repeat center;
   background-size: cover;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   height: 20rem;
   justify-content: space-between;
   width: auto;
 }
 
+.logo_div {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .logo {
   align-items: center;
-  background-color: black;
   color: white;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   padding: .66rem 0;
   text-transform: uppercase;
-  width: 100%;
+  width: 960px;
 }
 
 .logo img {
@@ -42,41 +47,45 @@ header {
   width: auto;
 }
 
-.logo h1 {
-  font-size: 1rem;
+.banner_div {
+  margin-bottom: auto;
+  margin-top: 10rem;
 }
 
 .banner {
-  color: white;
-  font-weight: bold;
-  margin: 10rem 0 auto;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .banner_info {
   background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
   width: 100%;
 }
 
 .banner_info h2 {
   font-size: .77rem;
   padding: 1rem 0 .25rem 2rem;
-  text-align: left;
 }
 
 .banner_info p {
-  font-size: 1rem;
-  padding: .25rem 0 1rem 2rem;
-  text-align: left;
+  padding: 0 0 1rem 2rem;
 }
 
-header nav {
+.nav_div {
   background-color: firebrick;
-  display: inline-flex;
+  width: 100%;
+}
+
+nav {
+  display: flex;
   font-weight: bold;
   justify-content: space-around;
   padding: .75rem 0;
-  width: 100%;
 }
 
 .eyewear,
@@ -167,27 +176,34 @@ header nav {
 
 footer {
   background-color: black;
+  width: 100%;
+}
+
+.footer_div {
   color: white;
   font-weight: bold;
   text-align: center;
-  width: 100%;
 }
 
 footer h3 {
   padding: 5rem 0;
 }
 
-@media only screen and (min-width: 480px) {
-  body {
-    max-width: 768px;
-  }
-
+@media only screen and (min-width: 470px) {
   header {
     height: 29.82rem;
   }
 
+  .banner_div {
+    margin-bottom: auto;
+    margin-top: 9rem;
+  }
+
   .banner {
-    margin: 9rem 0 auto;
+    justify-content: flex-start;
+  }
+
+  .banner_info {
     width: 25rem;
   }
 
@@ -198,17 +214,14 @@ footer h3 {
 
   .banner_info p {
     font-size: 2rem;
-    padding: .25rem 0 2rem 3rem;
+    padding: 0 0 2rem 3rem;
   }
 
   .gallery {
     justify-content: space-between;
   }
 
-  .pen {
-    width: 47%;
-  }
-
+  .pen,
   .watch {
     display: flex;
     width: 47%;
@@ -223,5 +236,66 @@ footer h3 {
   .location,
   .hours {
     width: 35%;
+  }
+
+  .footer_div {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px)
+{
+  .banner_div {
+    margin: 9rem auto auto auto;
+    width: 960px;
+  }
+
+  .nav_div {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: space-around;
+    width: 960px;
+  }
+
+  .eyewear,
+  .apparel,
+  .gadgets,
+  .vehicles,
+  .classes,
+  .contact {
+    display: flex;
+  }
+
+  .pen,
+  .watch,
+  .glasses {
+    width: 30%;
+  }
+
+  .glasses {
+    display: flex;
+    height: 16rem;
+  }
+
+  .glasses img {
+    height: auto;
+    margin: auto;
+    width: 9rem;
+  }
+
+  .info_div,
+  .gallery_div,
+  .footer_div {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  nav {
+    justify-content: space-between;
   }
 }
